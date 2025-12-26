@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boda Luis Eduardo & Carolina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Boda de Carolina y Luis Eduardo · 1 de mayo de 2026 · Ceremonia en Seseña Nuevo y celebración en el Hotel Complejo París (Illescas, Toledo)." />
+  <style>
+    :root {
+      --primary: #b88b5a;
+      --bg: #faf7f2;
+      --text: #333;
+      --accent: #4b4b4b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      /* Cambiado para usar la nueva imagen de portada: portada.jpg
+         Añade el archivo portada.jpg en la misma carpeta que index.html */
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+                  url("portada.jpg") bottom/cover no-repeat;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      letter-spacing: .08em;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+    }
+    header p { margin-bottom: 1rem; }
+    .date { font-weight: 600; }
+    .btn {
+      display: inline-block;
+      padding: .8rem 1.5rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: .5rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      overflow-x: auto;
+      list-style: none;
+    }
+    nav li { flex: 1; text-align: center; }
+    nav a {
+      display: block;
+      padding: .75rem .5rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: .75rem;
+      text-align: center;
+      color: var(--accent);
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      margin-bottom: 1rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 700px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      header h1 { font-size: 2rem; }
+    }
+    .timeline {
+      border-left: 2px solid var(--primary);
+      padding-left: 1rem;
+      margin-top: .5rem;
+    }
+    .timeline-item { margin-bottom: .75rem; }
+    .label { font-weight: 600; color: var(--primary); }
+    form {
+      display: grid;
+      gap: .75rem;
+      margin-top: .5rem;
+    }
+    input, select, textarea {
+      padding: .6rem .75rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font: inherit;
+      width: 100%;
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: .85rem;
+      color: #777;
+    }
+    a { color: #8b6844; }
+
+    /* Galería de momentos */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: .75rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 700px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="inicio">
+  <p>Enlace de</p>
+  <h1>Carolina & Luis Eduardo</h1>
+  <p class="date">1 de mayo de 2026</p>
+  <p>Nos casamos y queremos compartir este día tan especial con vosotros.</p>
+  <a href="#rsvp" class="btn">Confirmar asistencia</a>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#detalles">Detalles</a></li>
+    <li><a href="#historia">Nuestra historia</a></li>
+    <li><a href="#momentos">Nuestros momentos</a></li>
+    <li><a href="#programa">Programa</a></li>
+    <li><a href="#info">Info útil</a></li>
+    <li><a href="#rsvp">Formulario de Asistencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<section id="detalles">
+  <h2>Detalles de la boda</h2>
+  <div class="card grid-2">
+    <div>
+      <p class="label">Ceremonia</p>
+      <p>1 de mayo de 2026 · 12:00</p>
+      <p>Iglesia Ascensión del Señor</p>
+      <p>Calle Los Santos, 1<br>Seseña Nuevo (Toledo)</p>
+      <p>
+        <a href="https://ascensionsenorsesena.es/" target="_blank" rel="noopener noreferrer">
+          Ver en Google Maps
+        </a>
+      </p>
+    </div>
+
+    <div>
+      <p class="label">Celebración</p>
+      <p>1 de mayo de 2026 · 14:00</p>
+      <p>Hotel Complejo París</p>
+      <p>Ctra. de Ugena, 8<br>45200 Illescas (Toledo)</p>
+      <p>
+        <a href="https://complejoparis.com/" target="_blank" rel="noopener noreferrer">
+          Ver en Google Maps
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="historia">
+  <h2>Nuestra historia</h2>
+  <div class="card">
+    <p><strong>Nuestra Historia</strong></p>
+
+    <p style="margin-top:1rem;"><strong>Agosto 2019 · Nos conocimos</strong></p>
+    <p>
+      Nos conocimos en el instituto en la juventud, pero la vida nos deparaba otros caminos que se
+      volvieron a juntar en las fiestas de Seseña. Surgió lo que tuvo que surgir, la chispa del amor ❤️
+    </p>
+
+    <p style="margin-top:1rem;"><strong>Otoño 2019 · Primera aventura</strong></p>
+    <p>
+      Nuestro primer viaje juntos nos llevó a descubrir no solo nuevos lugares, sino también lo bien
+      que funcionamos como equipo. Cada experiencia nos unió más.
+    </p>
+
+    <p style="margin-top:1rem;"><strong>Septiembre 2024 · La propuesta</strong></p>
+    <p>
+      En un bello anochecer bajo las estrellas en Venecia, la pregunta más importante fue hecha y
+      respondida con un sí lleno de amor y emoción y a por el siguiente paso en nuestras vidas.
+    </p>
+  </div>
+</section>
+
+<section id="momentos">
+  <h2>Nuestros momentos</h2>
+  <div class="card">
+    <p>Este es un pequeño álbum con instantáneas de nuestro día a día y de las aventuras que seguimos compartiendo juntos.</p>
+    <div class="gallery-grid">
+      <img src="momento-1.jpg" alt="Momento especial 1" />
+      <img src="momento-2.jpg" alt="Momento especial 2" />
+      <img src="momento-3.jpg" alt="Momento especial 3" />
+      <img src="momento-4.jpg" alt="Momento especial 4" />
+      <img src="momento-5.jpg" alt="Momento especial 5" />
+      <img src="momento-6.jpg" alt="Momento especial 6" />
+    </div>
+  </div>
+</section>
+
+<section id="programa">
+  <h2>Programa del día</h2>
+  <div class="card timeline">
+    <div class="timeline-item">
+      <p class="label">12:00-13:00</p>
+      <p>Ceremonia religiosa en la Iglesia Ascensión del Señor de Seseña Nuevo (Toledo).</p>
+    </div>
+    <div class="timeline-item">
+      <p class="label">13:00-14:00</p>
+      <p>Traslado de los invitados en autobus (Recogida de invitados en el parking de la casa de la cultura de Seseña Nuevo) quien asi lo disponga hacia el evento en Illescas.</p>
+    </div>
+    <div class="timeline-item">
+      <p class="label">14:00- 18:00</p>
+      <p>Cóctel y comida en el Hotel Complejo París de Illescas (Toledo).</p>
+    </div>
+    <div class="timeline-item">
+      <p class="label">Tarde-noche</p>
+      <p>Baile, barra libre y fiesta hasta que el cuerpo aguante.</p>
+    </div>
+  </div>
+</section>
+
+<section id="info">
+  <h2>Información útil</h2>
+  <div class="card">
+    <p><strong>Dress code:</strong> Elegante de día (traje/vestido). Se recomienda calzado cómodo para aguantar el dia completo.</p>
+    <p><strong>Niños:</strong> Los niños son bienvenidos. Habrá espacios y opciones de menú para ellos.</p>
+    <p><strong>Transporte:</strong> Empresa TURYORTESO (Ida-Vuelta) - ANGEL DRIVE (Vueltas con codigo descuento al finalizar el evento) Próximamente añadiremos información acerca de los trayecots d[...] 
+  </div>
+</section>
+
+<section id="rsvp">
+  <h2>Confirmar asistencia</h2>
+  <div class="card">
+    <p>Por favor, confirma tu asistencia antes del 1 de abril de 2026.</p>
+    <!-- Cambia la URL de action por tu endpoint real de Formspree/Netlify Forms -->
+    <form action="https://formspree.io/f/tu-endpoint" method="POST">
+      <input type="text" name="nombre" placeholder="Nombre completo" required />
+      <input type="email" name="email" placeholder="Correo electrónico" required />
+      <select name="asistencia" required>
+        <option value="">¿Asistirás?</option>
+        <option value="si">Sí, allí estaré</option>
+        <option value="no">No podré asistir</option>
+      </select>
+      <input type="number" name="acompanantes" min="0" max="10" placeholder="Número total de asistentes (incluyéndote)" />
+      <textarea name="alergias" placeholder="Alergias o restricciones alimentarias"></textarea>
+      <textarea name="mensaje" placeholder="Mensaje para los novios (opcional)"></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+    <p style="margin-top:.5rem;font-size:.85rem;color:#777;">
+      Los datos se utilizarán únicamente para la organización de la boda.
+    </p>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="card">
+    <p>Si tienes cualquier duda sobre la boda, puedes escribirnos o llamarnos:</p>
+    <p><strong>Luis:</strong> 667 642 382</p>
+    <p><strong>Carolina:</strong> 657 22 90 91</p>
+    <p>También puedes usar el formulario de confirmación de asistencia para dejarnos cualquier comentario.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Con cariño, Carolina y Luis Eduardo· 2026</p>
+</footer>
+
+</body>
+</html>
