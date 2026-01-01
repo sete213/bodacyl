@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Boda Luis Eduardo & Carolina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Boda de Carolina y Luis Eduardo · 1 de mayo de 2026 · Ceremonia en Seseña Nuevo y celebración en el Hotel Complejo París (Illescas, Toledo)." />
+  <style>
+    :root {
+      --primary: #b88b5a;
+      --bg: #faf7f2;
+      --text: #333;
+      --accent: #4b4b4b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7)),
+                  url("portada.jpg") bottom/cover no-repeat;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      letter-spacing: .08em;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+    }
+    header p { margin-bottom: 1rem; }
+    .date { font-weight: 600; }
+    .btn {
+      display: inline-block;
+      padding: .8rem 1.5rem;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: .5rem;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      overflow-x: auto;
+      list-style: none;
+    }
+    nav li { flex: 1; text-align: center; }
+    nav a {
+      display: block;
+      padding: .75rem .5rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-size: .9rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    section {
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 1.5rem;
+      margin-bottom: .75rem;
+      text-align: center;
+      color: var(--accent);
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+      margin-bottom: 1rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 700px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      header h1 { font-size: 2rem; }
+    }
+    .timeline {
+      border-left: 2px solid --primary;
+      padding-left: 1rem;
+      margin-top: .5rem;
+    }
+    .timeline-item { margin-bottom: .75rem; }
+    .label { font-weight: 600; color: var(--primary); }
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: .85rem;
+      color: #777;
+    }
+    a { color: #8b6844; }
+
+    /* Galería de momentos */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-top: .75rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 700px) {
+      .gallery-grid {
+        grid-temp
